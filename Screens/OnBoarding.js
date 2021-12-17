@@ -3,10 +3,32 @@ import { Image, StyleSheet, Text, View } from 'react-native'
 import Onboarding from 'react-native-onboarding-swiper';
 
 const OnBoarding = ({navigation}) => {
+
+    const Circle = ({ isLight, selected }) => {
+        let backgroundColor;
+        if (isLight) {
+          backgroundColor = selected ? 'rgba(0, 0, 0, 0.8)' : 'rgba(0, 0, 0, 0.3)';
+        } else {
+          backgroundColor = selected ? '#fff' : 'rgba(255, 255, 255, 0.5)';
+        }
+        return (
+          <View
+            style={{
+              width: 5,
+              height: 5,
+              marginHorizontal: 3,
+              backgroundColor,
+              borderRadius: 3,
+            }}
+          />
+        );
+      };
+
     return (
         <Onboarding
         onDone={() => navigation.replace('Login')}
         onSkip={() => navigation.replace('Login')}
+        DotComponent={Circle}
         pages={[
           {
             backgroundColor: '#a6e4d0',
