@@ -18,7 +18,6 @@ const FormInput = ({labelValue , placeHolderTxt , iconType , ...rest}) => {
                 value={labelValue}
                 placeholderTextColor='#666'
                 {...rest}
-
             />
         </View>
     )

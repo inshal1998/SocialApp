@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import { windowHeight , windowWidth } from "../utils/Dimensions";
+import { windowHeight } from "../utils/Dimensions";
 const FormButton = ({buttonTitle , ...rest}) => {
     return (
             <TouchableOpacity style={styles.btnContainer} {...rest}>
